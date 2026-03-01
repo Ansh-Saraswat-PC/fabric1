@@ -4,9 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Greater Noida Microsoft Fabric User Group</title>
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="apple-touch-icon" href="favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -74,12 +71,16 @@
     height: 16px;
     flex-shrink: 0;
   }
-  .ms-logo span { display: block; border-radius: 1px; }
+  .ms-logo span {
+    display: block;
+    border-radius: 1px;
+  }
   .ms-logo span:nth-child(1) { background: var(--ms-red); }
   .ms-logo span:nth-child(2) { background: var(--ms-green); }
   .ms-logo span:nth-child(3) { background: var(--ms-blue); }
   .ms-logo span:nth-child(4) { background: var(--ms-yellow); }
 
+  .topnav-sep { color: #ccc; }
   .topnav-links { display: flex; gap: 20px; margin-left: auto; }
   .topnav-links a { color: var(--text-secondary); text-decoration: none; }
   .topnav-links a:hover { color: var(--ms-blue); }
@@ -92,6 +93,7 @@
     position: relative;
     overflow: hidden;
   }
+
   .hero::before {
     content: '';
     position: absolute;
@@ -136,7 +138,14 @@
     justify-content: center;
     box-shadow: var(--shadow-md);
     margin-bottom: 12px;
-    overflow: hidden;
+  }
+
+  .fabric-f {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: white;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -2px;
   }
 
   .hero-group-name {
@@ -158,6 +167,7 @@
     line-height: 1.2;
     margin-bottom: 10px;
   }
+
   .hero-content h1 span { color: var(--fabric-teal); }
 
   .hero-meta {
@@ -169,6 +179,7 @@
     gap: 20px;
     flex-wrap: wrap;
   }
+
   .hero-meta .badge {
     background: rgba(0, 183, 195, 0.12);
     color: var(--fabric-dark-teal);
@@ -202,9 +213,16 @@
     align-items: center;
     gap: 6px;
   }
-  .btn-primary { background: var(--ms-blue); color: white; }
+  .btn-primary {
+    background: var(--ms-blue);
+    color: white;
+  }
   .btn-primary:hover { background: #005fa3; transform: translateY(-1px); box-shadow: var(--shadow-md); }
-  .btn-outline { background: transparent; color: var(--ms-blue); border: 1.5px solid var(--ms-blue); }
+  .btn-outline {
+    background: transparent;
+    color: var(--ms-blue);
+    border: 1.5px solid var(--ms-blue);
+  }
   .btn-outline:hover { background: rgba(0,120,212,0.06); transform: translateY(-1px); }
 
   .hero-social {
@@ -214,7 +232,9 @@
     gap: 10px;
     align-items: flex-end;
   }
+
   .social-row { display: flex; gap: 8px; }
+
   .social-btn {
     width: 40px; height: 40px;
     border-radius: var(--radius);
@@ -274,7 +294,9 @@
     display: flex;
     border-bottom: 2px solid var(--border);
     margin-bottom: 28px;
+    gap: 0;
   }
+
   .tab {
     padding: 10px 20px;
     font-size: 0.88rem;
@@ -299,6 +321,7 @@
     margin-bottom: 24px;
     box-shadow: var(--shadow-sm);
   }
+
   .section-card h2 {
     font-size: 1.25rem;
     font-weight: 700;
@@ -320,7 +343,7 @@
   .info-value { color: var(--text-secondary); }
 
   /* ─── EVENTS ─── */
-  .events-list { display: flex; flex-direction: column; gap: 20px; width: 100%; }
+  .events-list { display: flex; flex-direction: column; gap: 20px; }
 
   .event-card {
     border: 1px solid var(--border);
@@ -331,15 +354,11 @@
     transition: box-shadow 0.2s, transform 0.2s;
     display: flex;
     flex-direction: column;
-    width: 100%;
   }
   .event-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
 
   .event-img-wrap {
-    width: 100%;
-    height: 220px;
-    min-height: 220px;
-    flex-shrink: 0;
+    height: 200px;
     background: linear-gradient(135deg, #d0f0ee, #e8f7f8);
     display: flex;
     align-items: center;
@@ -347,6 +366,7 @@
     position: relative;
     overflow: hidden;
   }
+
   .event-img-wrap img {
     width: 100%;
     height: 100%;
@@ -359,7 +379,9 @@
     flex-direction: column;
     align-items: center;
     gap: 8px;
+    color: var(--fabric-teal);
   }
+
   .event-img-placeholder .icon {
     width: 48px;
     height: 48px;
@@ -370,6 +392,7 @@
     justify-content: center;
     font-size: 1.4rem;
   }
+
   .event-img-placeholder span {
     font-size: 0.78rem;
     font-weight: 600;
@@ -390,6 +413,7 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
   }
+
   .event-status-badge {
     position: absolute;
     top: 12px; right: 12px;
@@ -419,6 +443,7 @@
 
   /* ─── SIDEBAR ─── */
   .sidebar { display: flex; flex-direction: column; gap: 20px; }
+
   .sidebar-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -426,6 +451,7 @@
     padding: 22px;
     box-shadow: var(--shadow-sm);
   }
+
   .sidebar-card h3 {
     font-size: 0.95rem;
     font-weight: 700;
@@ -461,8 +487,8 @@
     display: flex; align-items: center; justify-content: center;
     font-size: 1rem; font-weight: 700; color: white;
     flex-shrink: 0;
-    overflow: hidden;
   }
+
   .leader-name { font-size: 0.87rem; font-weight: 600; color: var(--ms-blue); }
   .leader-role { font-size: 0.75rem; color: var(--text-muted); }
 
@@ -498,7 +524,6 @@
     display: flex; align-items: center; justify-content: center;
     font-size: 0.78rem; font-weight: 700; color: white;
     flex-shrink: 0;
-    overflow: hidden;
   }
   .member-name { font-size: 0.83rem; font-weight: 600; color: var(--ms-blue); }
   .member-role { font-size: 0.72rem; color: var(--text-muted); }
@@ -535,13 +560,12 @@
   /* Animations */
   .fade-in { opacity: 0; animation: fadeIn 0.6s ease forwards; }
   @keyframes fadeIn { to { opacity: 1; } }
-  .event-card:nth-child(1) { animation: fadeIn 0.5s ease forwards 0.10s; opacity: 0; }
+
+  .event-card:nth-child(1) { animation: fadeIn 0.5s ease forwards 0.1s; opacity: 0; }
   .event-card:nth-child(2) { animation: fadeIn 0.5s ease forwards 0.25s; opacity: 0; }
-  .event-card:nth-child(3) { animation: fadeIn 0.5s ease forwards 0.40s; opacity: 0; }
-  .event-card:nth-child(4) { animation: fadeIn 0.5s ease forwards 0.55s; opacity: 0; }
-  .event-card:nth-child(5) { animation: fadeIn 0.5s ease forwards 0.70s; opacity: 0; }
-  .event-card:nth-child(6) { animation: fadeIn 0.5s ease forwards 0.85s; opacity: 0; }
+  .event-card:nth-child(3) { animation: fadeIn 0.5s ease forwards 0.4s; opacity: 0; }
 </style>
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 
@@ -569,7 +593,7 @@
   <div class="hero-inner">
     <div class="hero-logo-wrap">
       <div class="hero-logo">
-        <img src="images/logo.png" alt="Group Logo" style="width:100%;height:100%;object-fit:contain;">
+  <img src="images/logo.png" alt="Group Logo" style="width:80px;height:80px;object-fit:contain;">
       </div>
       <div class="hero-group-name">Greater Noida<br>Microsoft Fabric<br>User Group</div>
     </div>
@@ -620,6 +644,7 @@
 
   <!-- LEFT COLUMN -->
   <div>
+    <!-- Tab nav -->
     <div class="tab-nav">
       <a href="#" class="tab active">Group info</a>
       <a href="#" class="tab">Discussion</a>
@@ -652,10 +677,15 @@
       <h2>📅 Past Events</h2>
       <div class="events-list">
 
-        <!-- Event 1 — image already added -->
+        <!-- Event 1 -->
         <div class="event-card">
           <div class="event-img-wrap">
-            <img src="images/event1.png" alt="Inaugural Meetup">
+            <!-- Replace src below with your actual event image path -->
+            <img src="images/event1.png" alt="Launch Meetup"> 
+            <div class="event-img-placeholder">
+              <div class="icon">🖼</div>
+              <span>Add event photo here</span>
+            </div>
             <span class="event-date-badge">Jan 2025</span>
             <span class="event-status-badge status-completed">✓ Completed</span>
           </div>
@@ -680,6 +710,7 @@
         <!-- Event 2 -->
         <div class="event-card">
           <div class="event-img-wrap">
+            <!-- Replace src below with your actual event image path -->
             <!-- <img src="images/event2.jpg" alt="Power BI Workshop"> -->
             <div class="event-img-placeholder">
               <div class="icon">🖼</div>
@@ -709,6 +740,7 @@
         <!-- Event 3 -->
         <div class="event-card">
           <div class="event-img-wrap">
+            <!-- Replace src below with your actual event image path -->
             <!-- <img src="images/event3.jpg" alt="Data Engineering"> -->
             <div class="event-img-placeholder">
               <div class="icon">🖼</div>
@@ -739,6 +771,7 @@
         <!-- Event 4 -->
         <div class="event-card">
           <div class="event-img-wrap">
+            <!-- Replace src below with your actual event image path -->
             <!-- <img src="images/event4.jpg" alt="AI + Fabric"> -->
             <div class="event-img-placeholder">
               <div class="icon">🖼</div>
@@ -769,6 +802,7 @@
         <!-- Event 5 -->
         <div class="event-card">
           <div class="event-img-wrap">
+            <!-- Replace src below with your actual event image path -->
             <!-- <img src="images/event5.jpg" alt="Real-Time Analytics"> -->
             <div class="event-img-placeholder">
               <div class="icon">🖼</div>
@@ -799,6 +833,7 @@
         <!-- Event 6 -->
         <div class="event-card">
           <div class="event-img-wrap">
+            <!-- Replace src below with your actual event image path -->
             <!-- <img src="images/event6.jpg" alt="Fabric Certification Bootcamp"> -->
             <div class="event-img-placeholder">
               <div class="icon">🖼</div>
@@ -829,7 +864,7 @@
       </div>
     </div>
 
-    <!-- Discussion -->
+    <!-- Discussion placeholder -->
     <div class="section-card">
       <h2>💬 Discussion</h2>
       <p style="font-size:0.9rem;color:var(--text-muted);font-style:italic;">
@@ -868,7 +903,7 @@
       <h3>👑 Group Leaders</h3>
       <div class="leader-item">
         <div class="avatar">
-          <img src="images/leader1.jpg" alt="Ansh Saraswat" style="width:100%;height:100%;border-radius:50%;object-fit:cover;">
+          <img src="images/leader1.jpg" alt="Leader Name" style="width:100%;height:100%;border-radius:50%;object-fit:cover;">
         </div>
         <div>
           <div class="leader-name">Ansh Saraswat</div>
@@ -877,7 +912,7 @@
       </div>
       <div class="leader-item">
         <div class="avatar">
-          <img src="images/leader2.jpeg" alt="Mayank Jindal" style="width:100%;height:100%;border-radius:50%;object-fit:cover;">
+          <img src="images/leader2.jpeg" alt="Leader Name" style="width:100%;height:100%;border-radius:50%;object-fit:cover;">
         </div>
         <div>
           <div class="leader-name">Mayank Jindal</div>
@@ -892,21 +927,21 @@
       <h3>🧑‍💻 Members</h3>
       <div class="member-list">
         <div class="member-item">
-          <div class="member-avatar">SS</div>
+          <div class="member-avatar">M1</div>
           <div>
             <div class="member-name">Saurav Singh</div>
             <div class="member-role">PR and Outreach</div>
           </div>
         </div>
         <div class="member-item">
-          <div class="member-avatar">HD</div>
+          <div class="member-avatar">M2</div>
           <div>
             <div class="member-name">Harshal Dixit</div>
             <div class="member-role">Technical Head</div>
           </div>
         </div>
         <div class="member-item">
-          <div class="member-avatar">AJ</div>
+          <div class="member-avatar">M3</div>
           <div>
             <div class="member-name">Aanya Jain</div>
             <div class="member-role">Community Manager</div>
@@ -933,7 +968,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2025 Greater Noida Microsoft Fabric User Group · Part of the <a href="https://community.fabric.microsoft.com">Microsoft Fabric Community</a></p>
+  <p>© 2025 Greater Noida Microsoft Fabric User Group · Part of the <a href="#">Microsoft Fabric Community</a></p>
   <p style="margin-top:6px;">📍 Greater Noida, Uttar Pradesh, India</p>
 </footer>
 
