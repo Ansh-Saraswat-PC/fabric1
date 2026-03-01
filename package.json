@@ -1,0 +1,17 @@
+{
+  "name": "fabric",
+  "version": "1.0.0",
+  "description": "Greater Noida Microsoft Fabric User Group website",
+  "private": true,
+  "scripts": {
+    "deploy": "vercel deploy"
+  },
+  "keywords": [
+    "microsoft",
+    "fabric",
+    "user-group",
+    "community"
+  ],
+  "author": "",
+  "license": "ISC"
+}
